@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 22px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: #6f42c1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  place-content: center;
+}
+footer {
+  width: 100%;
+  padding: 0.25em;
+  background-color:aliceblue;
+  
+  display: grid;
+  place-content: center;
+}
+main {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-grow: 1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  overflow-y:auto;
+}
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
+}
+.item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  height: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+.delete-btn {
+  border: none;
+  background-color: transparent;
+  margin-top: 20px;
+  display: flex;
+}
+.addItem-btn {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.App {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  width: 100%; 
+  max-width: 500px;
+  border: 1px solid mediumblue;
+  margin: auto;
+}
+ul {
+  width: 100%;
+  list-style: none;
+ padding-left: 0rem !important;
+ padding-top: 20px;
+ 
+}
+.delete-btn{
+  margin-top: 0px;
+}
+.social-container {
+  padding: 25px 50px;
+
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.youtube {
+  color: #eb3223;
 }
 
-.App-link {
-  color: #61dafb;
+a.facebook {
+  color: #4968ad;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
 }
